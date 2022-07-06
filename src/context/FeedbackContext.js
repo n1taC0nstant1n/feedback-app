@@ -25,6 +25,8 @@ export const FeedbackProvider = ({children}) => {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+
                 },
                 body: JSON.stringify(updItem),
             })
@@ -56,7 +58,9 @@ export const FeedbackProvider = ({children}) => {
             const response = await fetch('/feedback', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+
                 },
                 body: JSON.stringify(newFeedback),
             })
